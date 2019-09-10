@@ -1,0 +1,178 @@
+
+/* GLOBAL RULES ----------------------------------------------------*/
+
+@font-face {
+	font-family: 'Afta Sans';
+	src: url('AftaSansThin-Regular.otf');
+}
+
+body {
+   margin: 0;
+   font-family: "Afta Sans", serif;
+   letter-spacing: 1px;
+}
+
+ul {
+   padding-left: 0;
+}
+
+li {
+   list-style-type: none;
+}
+
+table {
+   border: 1px solid black;
+   padding: 0.2rem;
+   overflow-x: scroll;
+}
+
+
+tr:nth-child(even) {
+   background-color: lightblue;
+}
+
+img {
+   max-width: 100%;
+}
+
+/* END GLOBAL RULES ---------------------------------------------------- */
+
+
+
+
+
+
+
+
+/*NAVBAR RULES ----------------------------------------------------*/
+
+.nav-bar {
+   display: none;
+   grid-area: nav-bar;
+   background-color: #59abe3;
+   box-shadow: 6px -2px 9px 0px rgba(0,0,0,0.75);
+   overflow: auto;
+}
+
+.nav-bar h1 {
+   text-align: center;
+   border-bottom: 1px solid black;
+   padding-bottom: 0.4em;
+}
+
+
+.nav-bar li {
+   padding-bottom: 1em;
+   padding-top: 1em;
+   border-bottom: 1px solid black;
+}
+
+.fas {
+   padding-left: 0.4em;
+   padding-right: 0.4em;
+}
+
+.aside-footer {
+   padding-top: 1em;
+   text-align: center;
+}
+
+/* END NAVBAR RULES  ---------------------------------------------------- */
+
+
+
+
+
+
+
+
+/* MAIN CONTAINER (ARTICLE) RULES --------------------------------------------*/
+ 
+.main-container {
+    grid-area: main-container;
+    padding-left: 2rem;
+    margin-right: 2rem;
+}
+
+
+.main-container h1 {
+   text-align: center;
+   margin: 1rem auto;
+}
+
+.main-container p {
+   text-align: justify;
+   margin: 2rem auto;
+}
+
+
+/* END MAIN CONTAINER (ARTICLE) RULES --------------------------------------------*/
+
+
+
+
+
+
+
+
+/* FOOTER RULES (PHONES ONLY)---------------------------------------------------- */
+
+footer {
+   background-color: #59abe3;
+}
+
+#footer-links {
+   text-align: center;
+   padding-bottom: 2rem;
+   padding-top: 2rem;
+}
+
+.m-footer-link {
+   border-bottom: 1px solid black;
+   padding-top: 2rem;
+   padding-bottom: 2rem;
+   text-align: center;
+}
+
+/* END FOOTER RULES (PHONES ONLY)---------------------------------------------------- */
+
+
+
+
+
+
+
+
+/* NONPHONE STYLES---------------------------------------------------- */
+
+@media screen and (min-width: 760px) {
+
+   .layout-container {
+
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-areas: "nav-bar main-container main-container main-container main-container main-container";
+
+   }
+
+   .nav-bar {
+      display: block;
+   }
+
+   .main-container p {
+      text-align: left;
+      margin-left: 2em;
+   }
+
+   footer {
+      display: none;
+   }
+   
+   img {
+      height: 50%;
+      width: 50%;
+   }
+
+}
+
+/* END NONPHONE STYLES---------------------------------------------------- */
